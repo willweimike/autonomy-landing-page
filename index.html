@@ -70,30 +70,8 @@
         </a>
         <a href="https://github.com/willweimike" target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--lg" id="hero-github-btn">
           <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-          查看原始碼
+          原始碼 is coming
         </a>
-      </div>
-
-      <div class="hero__stats" role="list" aria-label="專案統計數據">
-        <div class="hero__stat" role="listitem">
-          <span class="hero__stat-value" data-target="10">0</span>
-          <span class="hero__stat-label">內建 Procedure Skills</span>
-        </div>
-        <div class="hero__stat-divider" aria-hidden="true"></div>
-        <div class="hero__stat" role="listitem">
-          <span class="hero__stat-value" data-target="6">0</span>
-          <span class="hero__stat-label">已實作工具集</span>
-        </div>
-        <div class="hero__stat-divider" aria-hidden="true"></div>
-        <div class="hero__stat" role="listitem">
-          <span class="hero__stat-value" data-target="5">0</span>
-          <span class="hero__stat-label">維評分維度</span>
-        </div>
-        <div class="hero__stat-divider" aria-hidden="true"></div>
-        <div class="hero__stat" role="listitem">
-          <span class="hero__stat-value" data-target="3">0</span>
-          <span class="hero__stat-label">Beam Width</span>
-        </div>
       </div>
     </div>
 
@@ -138,40 +116,35 @@
             <div class="turn-flow__step" id="tf-skills">
               <div class="turn-flow__icon">📚</div>
               <div class="turn-flow__content">
-                <span class="turn-flow__name">disclose_procedure_skills()</span>
-                <span class="turn-flow__desc">選取相關技能</span>
+                <span class="turn-flow__name">選取相關技能</span>
               </div>
             </div>
             <div class="turn-flow__arrow" aria-hidden="true">↓</div>
             <div class="turn-flow__step" id="tf-candidates">
               <div class="turn-flow__icon">💡</div>
               <div class="turn-flow__content">
-                <span class="turn-flow__name">generate_candidates()</span>
-                <span class="turn-flow__desc">LLM 提案 + Recipe Engine</span>
+                <span class="turn-flow__name">LLM 提案 + Recipe Engine</span>
               </div>
             </div>
             <div class="turn-flow__arrow" aria-hidden="true">↓</div>
             <div class="turn-flow__step" id="tf-rank">
               <div class="turn-flow__icon">📊</div>
               <div class="turn-flow__content">
-                <span class="turn-flow__name">rank_candidates()</span>
-                <span class="turn-flow__desc">5 維評分 · Beam Width=3</span>
+                <span class="turn-flow__name">5 維評分 · Beam Width=3</span>
               </div>
             </div>
             <div class="turn-flow__arrow" aria-hidden="true">↓</div>
             <div class="turn-flow__step" id="tf-execute">
               <div class="turn-flow__icon">⚡</div>
               <div class="turn-flow__content">
-                <span class="turn-flow__name">ActionGateway.execute_next()</span>
-                <span class="turn-flow__desc">ApprovalPolicy 授權 · 受管執行</span>
+                <span class="turn-flow__name">ApprovalPolicy 授權 · 受管執行</span>
               </div>
             </div>
             <div class="turn-flow__arrow" aria-hidden="true">↓</div>
             <div class="turn-flow__step" id="tf-learn">
               <div class="turn-flow__icon">🧠</div>
               <div class="turn-flow__content">
-                <span class="turn-flow__name">evaluate_outcome() + learn()</span>
-                <span class="turn-flow__desc">結果評估 · Recipe 學習</span>
+                <span class="turn-flow__name">結果評估 · Recipe 學習</span>
               </div>
             </div>
           </div>
@@ -185,8 +158,7 @@
     <div class="container">
       <div class="section-header">
         <div class="section-tag">核心模組</div>
-        <h2 class="section-title" id="features-heading">十大技術特點</h2>
-        <p class="section-desc">每個特點都直接對應 Autonomy 原始碼中的具體實作</p>
+        <h2 class="section-title" id="features-heading">八大技術特點</h2>
       </div>
 
       <div class="features__grid">
@@ -196,14 +168,6 @@
             <div class="feature-card__icon">🔄</div>
           </div>
           <h3 class="feature-card__title">自導向代理人迴圈</h3>
-          <p class="feature-card__desc">
-            <code>AgentLoop.run(goal, max_steps=12)</code> 啟動後完全自主執行，每步驟透過 <code>run_turn()</code> 推進。支援互動模式（<code>interactive=True</code>）與批次模式，所有事件均以 <code>run_id</code> 記錄於 <code>AutonomyStore</code>。
-          </p>
-          <ul class="feature-card__tags" aria-label="相關類別">
-            <li class="tag">AgentLoop</li>
-            <li class="tag">RunState</li>
-            <li class="tag">TerminationReason</li>
-          </ul>
         </article>
 
         <article class="feature-card reveal-up" style="--delay:80ms" id="feature-gateway">
@@ -211,14 +175,6 @@
             <div class="feature-card__icon">🛡️</div>
           </div>
           <h3 class="feature-card__title">受管行動閘道</h3>
-          <p class="feature-card__desc">
-            所有工具呼叫必須通過 <code>ActionGateway</code> 的 <code>ApprovalPolicy</code> 授權。每個動作帶有 <code>RiskLevel</code>（LOW / MEDIUM / HIGH）、<code>expected_effect</code> 與 <code>verification_plan</code>，確保執行可控、可審計。
-          </p>
-          <ul class="feature-card__tags" aria-label="相關類別">
-            <li class="tag">ActionGateway</li>
-            <li class="tag">ApprovalPolicy</li>
-            <li class="tag">RiskLevel</li>
-          </ul>
         </article>
 
         <article class="feature-card reveal-up" style="--delay:160ms" id="feature-beamsearch">
@@ -226,14 +182,6 @@
             <div class="feature-card__icon">📊</div>
           </div>
           <h3 class="feature-card__title">5 維 Beam Search 評分</h3>
-          <p class="feature-card__desc">
-            <code>CandidateSelector</code> 以 evidence_strength（+0.30）、purpose（+0.10）、risk（−0.35）、side_effects（−0.20）、penalty（−1.0）五個維度計算總分，選出前 <code>beam_width=3</code> 名候選路徑送往執行。
-          </p>
-          <ul class="feature-card__tags" aria-label="相關類別">
-            <li class="tag">CandidateSelector</li>
-            <li class="tag">CandidatePath</li>
-            <li class="tag">beam_width=3</li>
-          </ul>
         </article>
 
         <article class="feature-card reveal-up" style="--delay:240ms" id="feature-outcome">
@@ -241,29 +189,6 @@
             <div class="feature-card__icon">🎯</div>
           </div>
           <h3 class="feature-card__title">混合結果評估</h3>
-          <p class="feature-card__desc">
-            <code>DeterministicOutcomeEvaluator</code> 優先判斷執行失敗（直接 BLOCKED），成功但結果不確定時再交由 <code>ModelAssistedOutcomeEvaluator</code> 呼叫 LLM 語義判斷——最小化昂貴的模型呼叫次數。
-          </p>
-          <ul class="feature-card__tags" aria-label="相關類別">
-            <li class="tag">DeterministicEvaluator</li>
-            <li class="tag">ModelAssistedEvaluator</li>
-            <li class="tag">GoalStatus</li>
-          </ul>
-        </article>
-
-        <article class="feature-card reveal-up" style="--delay:320ms" id="feature-skills">
-          <div class="feature-card__icon-wrap" aria-hidden="true">
-            <div class="feature-card__icon">📚</div>
-          </div>
-          <h3 class="feature-card__title">程序技能庫（10 內建）</h3>
-          <p class="feature-card__desc">
-            <code>ProcedureSkillLibrary</code> 內建 10 個技能（api-debugging、browser-navigation、code-editing、codebase-documentation、process-management、systematic-debugging、technical-spike、TDD、web-research、website-inspection），每步動態選取最相關技能載入。
-          </p>
-          <ul class="feature-card__tags" aria-label="相關類別">
-            <li class="tag">ProcedureSkillLibrary</li>
-            <li class="tag">ProcedureSkill</li>
-            <li class="tag">requires_tools</li>
-          </ul>
         </article>
 
         <article class="feature-card reveal-up" style="--delay:400ms" id="feature-learning">
@@ -271,14 +196,6 @@
             <div class="feature-card__icon">🧠</div>
           </div>
           <h3 class="feature-card__title">後執行學習迴路</h3>
-          <p class="feature-card__desc">
-            每次 Run 結束後，<code>LearningLoop.review_run()</code> 自動觸發：若結果為 ACHIEVED 且有 ≥2 個成功步驟，自動起草新 <code>ProcedureSkillDraft</code>（信心度 0.85），生成 <code>LearningProposal</code> 等待審核。
-          </p>
-          <ul class="feature-card__tags" aria-label="相關類別">
-            <li class="tag">LearningLoop</li>
-            <li class="tag">LearningProposal</li>
-            <li class="tag">confidence=0.85</li>
-          </ul>
         </article>
 
         <article class="feature-card reveal-up" style="--delay:480ms" id="feature-recipe">
@@ -286,14 +203,6 @@
             <div class="feature-card__icon">⚗️</div>
           </div>
           <h3 class="feature-card__title">Action Recipe 引擎</h3>
-          <p class="feature-card__desc">
-            <code>RecipeEngine</code> 監控每個成功動作的 SHA-256 指紋——當同一動作成功次數 ≥ <code>candidate_threshold=2</code>，自動升格為候選 Recipe，下次直接作為行動選項（source=<code>action_skill</code>）提出，無需 LLM 重新推理。
-          </p>
-          <ul class="feature-card__tags" aria-label="相關類別">
-            <li class="tag">RecipeEngine</li>
-            <li class="tag">ActionRecipe</li>
-            <li class="tag">action fingerprint</li>
-          </ul>
         </article>
 
         <article class="feature-card reveal-up" style="--delay:560ms" id="feature-curator">
@@ -301,44 +210,14 @@
             <div class="feature-card__icon">🗂️</div>
           </div>
           <h3 class="feature-card__title">技能策展守護程序</h3>
-          <p class="feature-card__desc">
-            每次 Run 結束後，<code>CuratorDaemon</code> 在後台執行緒（<code>daemon=True</code>）非同步啟動 <code>SkillCurator.apply_auto_merges()</code>，自動偵測並合併重複（信心 0.95）或子集（信心 0.90）技能，防止技能庫膨脹。
-          </p>
-          <ul class="feature-card__tags" aria-label="相關類別">
-            <li class="tag">CuratorDaemon</li>
-            <li class="tag">SkillCurator</li>
-            <li class="tag">async merge</li>
-          </ul>
         </article>
 
-        <article class="feature-card reveal-up" style="--delay:640ms" id="feature-toolsets">
-          <div class="feature-card__icon-wrap" aria-hidden="true">
-            <div class="feature-card__icon">🧰</div>
-          </div>
-          <h3 class="feature-card__title">可擴展工具集目錄</h3>
-          <p class="feature-card__desc">
-            <code>TOOLSET_CATALOG</code> 涵蓋 6 個已實作工具集：file（5 工具）、terminal（6 工具）、browser（11 工具）、web（2 工具）、search、skills，以及 memory、delegate、cronjob、computer_use 等規劃中工具集。預設啟用：file、terminal、search、skills。
-          </p>
-          <ul class="feature-card__tags" aria-label="相關類別">
-            <li class="tag">ToolsetCatalog</li>
-            <li class="tag">ToolRegistry</li>
-            <li class="tag">ToolsetConfigStore</li>
-          </ul>
-        </article>
 
         <article class="feature-card reveal-up" style="--delay:720ms" id="feature-store">
           <div class="feature-card__icon-wrap" aria-hidden="true">
             <div class="feature-card__icon">📡</div>
           </div>
           <h3 class="feature-card__title">完整事件溯源稽核</h3>
-          <p class="feature-card__desc">
-            <code>AutonomyStore</code> 以 Event Sourcing 模式記錄整個執行生命週期：run_started → skills_selected → candidates_ranked → action_selected → approval_decision → observation → outcome_evaluated → recipe_learned → learning_review → run_finished，完整可重播。
-          </p>
-          <ul class="feature-card__tags" aria-label="相關類別">
-            <li class="tag">AutonomyStore</li>
-            <li class="tag">record_event()</li>
-            <li class="tag">Event Sourcing</li>
-          </ul>
         </article>
 
       </div>
@@ -535,136 +414,8 @@
           </div>
         </div>
       </div>
-
-      <!-- Real Toolset Catalog -->
-      <div class="tech-stack reveal-up">
-        <h3 class="tech-stack__title">TOOLSET_CATALOG — 實際工具集</h3>
-        <div class="tech-stack__grid">
-          <div class="tech-item tech-item--live" id="tech-file">
-            <span class="tech-item__dot" aria-hidden="true"></span>
-            <div>
-              <span class="tech-item__name">file</span>
-              <span class="tech-item__sub">read / list / write / patch / search_files</span>
-            </div>
-          </div>
-          <div class="tech-item tech-item--live" id="tech-terminal">
-            <span class="tech-item__dot" aria-hidden="true"></span>
-            <div>
-              <span class="tech-item__name">terminal</span>
-              <span class="tech-item__sub">shell.execute / process.start/poll/log/wait/stop</span>
-            </div>
-          </div>
-          <div class="tech-item tech-item--live" id="tech-browser">
-            <span class="tech-item__dot" aria-hidden="true"></span>
-            <div>
-              <span class="tech-item__name">browser</span>
-              <span class="tech-item__sub">navigate / snapshot / click / type / scroll / screenshot…</span>
-            </div>
-          </div>
-          <div class="tech-item tech-item--live" id="tech-web">
-            <span class="tech-item__dot" aria-hidden="true"></span>
-            <div>
-              <span class="tech-item__name">web</span>
-              <span class="tech-item__sub">web.fetch / web.extract</span>
-            </div>
-          </div>
-          <div class="tech-item tech-item--live" id="tech-search">
-            <span class="tech-item__dot" aria-hidden="true"></span>
-            <div>
-              <span class="tech-item__name">search</span>
-              <span class="tech-item__sub">search.text</span>
-            </div>
-          </div>
-          <div class="tech-item tech-item--live" id="tech-skills-tool">
-            <span class="tech-item__dot" aria-hidden="true"></span>
-            <div>
-              <span class="tech-item__name">skills</span>
-              <span class="tech-item__sub">procedure skill 管理與發現</span>
-            </div>
-          </div>
-          <div class="tech-item tech-item--planned" id="tech-memory">
-            <span class="tech-item__dot tech-item__dot--planned" aria-hidden="true"></span>
-            <div>
-              <span class="tech-item__name">memory</span>
-              <span class="tech-item__sub">規劃中</span>
-            </div>
-          </div>
-          <div class="tech-item tech-item--planned" id="tech-delegate">
-            <span class="tech-item__dot tech-item__dot--planned" aria-hidden="true"></span>
-            <div>
-              <span class="tech-item__name">delegate</span>
-              <span class="tech-item__sub">子任務委派 · 規劃中</span>
-            </div>
-          </div>
-          <div class="tech-item tech-item--planned" id="tech-computer-use">
-            <span class="tech-item__dot tech-item__dot--planned" aria-hidden="true"></span>
-            <div>
-              <span class="tech-item__name">computer_use</span>
-              <span class="tech-item__sub">桌面自動化 · 規劃中</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
 
-  <!-- ─── TOOLSETS DETAIL ─── -->
-  <section class="toolsets section" id="toolsets" aria-labelledby="toolsets-heading">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">內建技能</div>
-        <h2 class="section-title" id="toolsets-heading">10 個 Bundled Procedure Skills</h2>
-        <p class="section-desc">每個技能以 Markdown 格式定義，包含名稱、描述、所需工具與平台</p>
-      </div>
-
-      <div class="skills-grid reveal-up" role="list" aria-label="內建程序技能列表">
-        <div class="skill-chip" role="listitem" id="skill-api">
-          <span class="skill-chip__icon" aria-hidden="true">🔌</span>
-          <span class="skill-chip__name">api-debugging</span>
-        </div>
-        <div class="skill-chip" role="listitem" id="skill-browser">
-          <span class="skill-chip__icon" aria-hidden="true">🌐</span>
-          <span class="skill-chip__name">browser-navigation</span>
-        </div>
-        <div class="skill-chip" role="listitem" id="skill-code-edit">
-          <span class="skill-chip__icon" aria-hidden="true">✏️</span>
-          <span class="skill-chip__name">code-editing</span>
-        </div>
-        <div class="skill-chip" role="listitem" id="skill-docs">
-          <span class="skill-chip__icon" aria-hidden="true">📖</span>
-          <span class="skill-chip__name">codebase-documentation</span>
-        </div>
-        <div class="skill-chip" role="listitem" id="skill-process">
-          <span class="skill-chip__icon" aria-hidden="true">⚙️</span>
-          <span class="skill-chip__name">process-management</span>
-        </div>
-        <div class="skill-chip" role="listitem" id="skill-debug">
-          <span class="skill-chip__icon" aria-hidden="true">🐛</span>
-          <span class="skill-chip__name">systematic-debugging</span>
-        </div>
-        <div class="skill-chip" role="listitem" id="skill-spike">
-          <span class="skill-chip__icon" aria-hidden="true">⚡</span>
-          <span class="skill-chip__name">technical-spike</span>
-        </div>
-        <div class="skill-chip" role="listitem" id="skill-tdd">
-          <span class="skill-chip__icon" aria-hidden="true">🧪</span>
-          <span class="skill-chip__name">test-driven-development</span>
-        </div>
-        <div class="skill-chip" role="listitem" id="skill-research">
-          <span class="skill-chip__icon" aria-hidden="true">🔍</span>
-          <span class="skill-chip__name">web-research</span>
-        </div>
-        <div class="skill-chip" role="listitem" id="skill-inspect">
-          <span class="skill-chip__icon" aria-hidden="true">🔭</span>
-          <span class="skill-chip__name">website-inspection</span>
-        </div>
-      </div>
-
-      <p class="skills-note reveal-up">
-        每次執行 Turn 時，<code>model.select_procedure_skills()</code> 依可用工具名稱動態篩選並載入最相關技能；執行成功且達到門檻後，<code>LearningLoop</code> 將自動起草新技能並生成 <code>LearningProposal</code>（CANDIDATE 狀態）。
-      </p>
-    </div>
-  </section>
 
   <!-- ─── TERMINAL DEMO ─── -->
   <section class="demo section" id="demo" aria-labelledby="demo-heading">
@@ -687,6 +438,14 @@
         </div>
       </div>
     </div>
+  </section>
+
+ <!-- ─── More to Come ─── -->
+  <section class="toolsets section" id="toolsets" aria-labelledby="toolsets-heading">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" id="toolsets-heading">More to Come</h2>
+      </div>
   </section>
 
   <!-- ─── AUTHOR ─── -->
