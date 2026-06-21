@@ -1739,6 +1739,30 @@ svg { flex-shrink: 0; }
   line-height: 1.3;
 }
 
+/* External / specialty skills */
+.skill-chip--ext {
+  border-color: hsl(258, 79%, 58%, 0.3);
+}
+.skill-chip--ext:hover {
+  border-color: hsl(258, 79%, 58%, 0.6);
+  box-shadow: var(--shadow-glow-purple);
+}
+
+/* ClawHub / Hermes extensible hub */
+.skill-chip--clawhub {
+  border-style: dashed;
+  border-color: hsl(172, 66%, 50%, 0.35);
+  background: hsl(172, 66%, 50%, 0.04);
+}
+.skill-chip--clawhub .skill-chip__name {
+  color: var(--clr-teal);
+}
+.skill-chip--clawhub:hover {
+  border-color: hsl(172, 66%, 50%, 0.7);
+  box-shadow: 0 0 30px hsl(172, 66%, 50%, 0.15);
+}
+
+
 .skills-note {
   font-size: 0.9rem;
   color: var(--clr-text-muted);

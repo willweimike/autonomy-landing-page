@@ -102,12 +102,12 @@
 
       <div class="hero__stats" role="list" aria-label="專案統計數據">
         <div class="hero__stat" role="listitem">
-          <span class="hero__stat-value" data-target="13">0</span>
+          <span class="hero__stat-value" data-target="16">0</span>
           <span class="hero__stat-label" data-i18n="hero.stat1">內建 Procedure Skills</span>
         </div>
         <div class="hero__stat-divider" aria-hidden="true"></div>
         <div class="hero__stat" role="listitem">
-          <span class="hero__stat-value" data-target="30">0</span>
+          <span class="hero__stat-value" data-target="40">0</span>
           <span class="hero__stat-label" data-i18n="hero.stat2">+ 內建工具</span>
         </div>
         <div class="hero__stat-divider" aria-hidden="true"></div>
@@ -624,18 +624,23 @@
           </div>
           <div class="tech-item tech-item--live" id="tech-browser">
             <span class="tech-item__dot" aria-hidden="true"></span>
-            <div><span class="tech-item__name">browser</span><span class="tech-item__sub">Playwright Chromium · navigate
-                / snapshot / click / screenshot… (opt-in)</span></div>
+            <div><span class="tech-item__name">browser</span><span class="tech-item__sub">Playwright Chromium · navigate / snapshot / click / screenshot… (default-enabled)</span></div>
           </div>
           <div class="tech-item tech-item--live" id="tech-memory">
             <span class="tech-item__dot" aria-hidden="true"></span>
-            <div><span class="tech-item__name">memory</span><span class="tech-item__sub"
-                data-i18n="arch.memorySub">Persistent Workspace Memory & Context Injection</span></div>
+            <div><span class="tech-item__name">memory</span><span class="tech-item__sub" data-i18n="arch.memorySub">Persistent Workspace Memory & Context Injection (default-enabled)</span></div>
+          </div>
+          <div class="tech-item tech-item--live" id="tech-database">
+            <span class="tech-item__dot" aria-hidden="true"></span>
+            <div><span class="tech-item__name">database</span><span class="tech-item__sub">SQLGlot-backed read-only SQL · multi-dialect · natural-language generation (opt-in)</span></div>
+          </div>
+          <div class="tech-item tech-item--live" id="tech-mcp">
+            <span class="tech-item__dot" aria-hidden="true"></span>
+            <div><span class="tech-item__name">mcp</span><span class="tech-item__sub">External MCP Server tools via stdio / HTTP — governed by ActionGateway (opt-in)</span></div>
           </div>
           <div class="tech-item tech-item--planned" id="tech-planned">
             <span class="tech-item__dot tech-item__dot--planned" aria-hidden="true"></span>
-            <div><span class="tech-item__name">delegate / cronjob / computer_use</span><span
-                class="tech-item__sub">planned</span></div>
+            <div><span class="tech-item__name">delegate / cronjob / computer_use</span><span class="tech-item__sub">planned</span></div>
           </div>
         </div>
         <h3 class="tech-stack__title" style="margin-top:2rem" data-i18n="arch.providertitle">支援 AI Provider</h3>
@@ -684,32 +689,25 @@
       </div>
 
       <div class="skills-grid reveal-up" role="list" aria-label="內建程序技能列表">
-        <div class="skill-chip" role="listitem" id="skill-api"><span class="skill-chip__icon"
-            aria-hidden="true">🔌</span><span class="skill-chip__name">api-debugging</span></div>
-        <div class="skill-chip" role="listitem" id="skill-browser"><span class="skill-chip__icon"
-            aria-hidden="true">🌐</span><span class="skill-chip__name">browser-navigation</span></div>
-        <div class="skill-chip" role="listitem" id="skill-code-edit"><span class="skill-chip__icon"
-            aria-hidden="true">✏️</span><span class="skill-chip__name">code-editing</span></div>
-        <div class="skill-chip" role="listitem" id="skill-docs"><span class="skill-chip__icon"
-            aria-hidden="true">📖</span><span class="skill-chip__name">codebase-documentation</span></div>
-        <div class="skill-chip" role="listitem" id="skill-plan"><span class="skill-chip__icon"
-            aria-hidden="true">📋</span><span class="skill-chip__name">plan</span></div>
-        <div class="skill-chip" role="listitem" id="skill-skill-authoring"><span class="skill-chip__icon"
-            aria-hidden="true">🖊️</span><span class="skill-chip__name">procedure-skill-authoring</span></div>
-        <div class="skill-chip" role="listitem" id="skill-process"><span class="skill-chip__icon"
-            aria-hidden="true">⚙️</span><span class="skill-chip__name">process-management</span></div>
-        <div class="skill-chip" role="listitem" id="skill-review"><span class="skill-chip__icon"
-            aria-hidden="true">🔎</span><span class="skill-chip__name">requesting-code-review</span></div>
-        <div class="skill-chip" role="listitem" id="skill-debug"><span class="skill-chip__icon"
-            aria-hidden="true">🐛</span><span class="skill-chip__name">systematic-debugging</span></div>
-        <div class="skill-chip" role="listitem" id="skill-spike"><span class="skill-chip__icon"
-            aria-hidden="true">⚡</span><span class="skill-chip__name">technical-spike</span></div>
-        <div class="skill-chip" role="listitem" id="skill-tdd"><span class="skill-chip__icon"
-            aria-hidden="true">🧪</span><span class="skill-chip__name">test-driven-development</span></div>
-        <div class="skill-chip" role="listitem" id="skill-inspect"><span class="skill-chip__icon"
-            aria-hidden="true">🔭</span><span class="skill-chip__name">website-inspection</span></div>
-        <div class="skill-chip" role="listitem" id="skill-writing-plans"><span class="skill-chip__icon"
-            aria-hidden="true">📝</span><span class="skill-chip__name">writing-plans</span></div>
+        <div class="skill-chip" role="listitem" id="skill-repo"><span class="skill-chip__icon" aria-hidden="true">🗺️</span><span class="skill-chip__name">repository-orientation</span></div>
+        <div class="skill-chip" role="listitem" id="skill-test-diag"><span class="skill-chip__icon" aria-hidden="true">🩺</span><span class="skill-chip__name">test-diagnosis</span></div>
+        <div class="skill-chip" role="listitem" id="skill-audit"><span class="skill-chip__icon" aria-hidden="true">🔍</span><span class="skill-chip__name">implementation-status-audit</span></div>
+        <div class="skill-chip" role="listitem" id="skill-code-edit"><span class="skill-chip__icon" aria-hidden="true">✏️</span><span class="skill-chip__name">code-editing</span></div>
+        <div class="skill-chip" role="listitem" id="skill-debug"><span class="skill-chip__icon" aria-hidden="true">🐛</span><span class="skill-chip__name">systematic-debugging</span></div>
+        <div class="skill-chip" role="listitem" id="skill-tdd"><span class="skill-chip__icon" aria-hidden="true">🧪</span><span class="skill-chip__name">test-driven-development</span></div>
+        <div class="skill-chip" role="listitem" id="skill-spike"><span class="skill-chip__icon" aria-hidden="true">⚡</span><span class="skill-chip__name">technical-spike</span></div>
+        <div class="skill-chip" role="listitem" id="skill-process"><span class="skill-chip__icon" aria-hidden="true">⚙️</span><span class="skill-chip__name">process-management</span></div>
+        <div class="skill-chip" role="listitem" id="skill-api"><span class="skill-chip__icon" aria-hidden="true">🔌</span><span class="skill-chip__name">api-debugging</span></div>
+        <div class="skill-chip" role="listitem" id="skill-browser"><span class="skill-chip__icon" aria-hidden="true">🌐</span><span class="skill-chip__name">browser-navigation</span></div>
+        <div class="skill-chip" role="listitem" id="skill-inspect"><span class="skill-chip__icon" aria-hidden="true">🔭</span><span class="skill-chip__name">website-inspection</span></div>
+        <div class="skill-chip" role="listitem" id="skill-docs"><span class="skill-chip__icon" aria-hidden="true">📖</span><span class="skill-chip__name">codebase-documentation</span></div>
+        <div class="skill-chip" role="listitem" id="skill-review"><span class="skill-chip__icon" aria-hidden="true">🔎</span><span class="skill-chip__name">requesting-code-review</span></div>
+        <div class="skill-chip" role="listitem" id="skill-plan"><span class="skill-chip__icon" aria-hidden="true">📋</span><span class="skill-chip__name">plan</span></div>
+        <div class="skill-chip" role="listitem" id="skill-writing-plans"><span class="skill-chip__icon" aria-hidden="true">📝</span><span class="skill-chip__name">writing-plans</span></div>
+        <div class="skill-chip" role="listitem" id="skill-skill-authoring"><span class="skill-chip__icon" aria-hidden="true">🖊️</span><span class="skill-chip__name">procedure-skill-authoring</span></div>
+        <div class="skill-chip skill-chip--ext" role="listitem" id="skill-email"><span class="skill-chip__icon" aria-hidden="true">📧</span><span class="skill-chip__name">email-himalaya</span></div>
+        <div class="skill-chip skill-chip--ext" role="listitem" id="skill-db"><span class="skill-chip__icon" aria-hidden="true">🗄️</span><span class="skill-chip__name">database-retrieval</span></div>
+        <div class="skill-chip skill-chip--clawhub" role="listitem" id="skill-clawhub"><span class="skill-chip__icon" aria-hidden="true">🪝</span><span class="skill-chip__name">+ ClawHub / Hermes skills</span></div>
       </div>
 
       <p class="skills-note reveal-up" data-i18n-html="toolsets.note">
