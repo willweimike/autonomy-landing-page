@@ -113,10 +113,6 @@ const I18N = {
       desc: '每個安全特性都直接對應 Autonomy 原始碼中的具體實作，不是文件上的承諾',
       s1t: '自動憑證遮蔽',
       s1d: 'Shell 輸出與 Observation 在寫入日誌前，自動 Redact API Key、Bearer Token、私鑰區塊等機密資訊',
-      s2t: '.env 檔案完全封鎖',
-      s2d: '.env、.env.local、.envrc 等敏感檔案被阻擋於 file 讀寫/搜尋工具之外，API 金鑰永不進入模型上下文',
-      s3t: 'Workspace 強制隔離',
-      s3d: '所有設定、技能、截圖存於 &lt;workspace&gt;/.autonomy/，不讀取 ~/.autonomy 作 fallback，強制每個專案獨立配置',
       s4t: '三段式風險閘道',
       s4d: 'RiskLevel.LOW（讀取）自動放行；MEDIUM（寫入/瀏覽器）需授權；非互動模式下未知 Shell 命令直接拒絕',
     },
@@ -250,10 +246,6 @@ const I18N = {
       desc: 'Every security feature maps directly to concrete implementation in the Autonomy source code, not just documentation promises',
       s1t: 'Automatic Credential Redaction',
       s1d: 'Shell output and Observations are automatically redacted before journaling: API keys, Bearer tokens, private key blocks are scrubbed',
-      s2t: '.env Files Fully Blocked',
-      s2d: '.env, .env.local, .envrc and similar files are blocked from all file read/write/search tools. API keys never enter model context',
-      s3t: 'Workspace Isolation Enforced',
-      s3d: 'All config, skills, and screenshots are stored under <workspace>/.autonomy/. No ~/.autonomy fallback, each project is fully isolated',
       s4t: 'Three-Tier Risk Gateway',
       s4d: 'RiskLevel.LOW (reads) auto-approved; MEDIUM (writes/browser) requires authorization; unknown shell commands rejected in non-interactive mode',
     },
@@ -328,7 +320,7 @@ function applyLanguage(lang) {
   }
 
   // Persist
-  try { localStorage.setItem('autonomy-lang', lang); } catch (_) {}
+  try { localStorage.setItem('autonomy-lang', lang); } catch (_) { }
 
   // Dispatch event so main.js can react (e.g., restart terminal)
   document.dispatchEvent(new CustomEvent('langchange', { detail: { lang } }));
@@ -340,7 +332,7 @@ function initI18n() {
   try {
     const saved = localStorage.getItem('autonomy-lang');
     if (saved === 'en' || saved === 'zh') lang = saved;
-  } catch (_) {}
+  } catch (_) { }
 
   // Wire up toggle button
   const btn = document.getElementById('lang-toggle');

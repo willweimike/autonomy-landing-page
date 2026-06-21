@@ -427,9 +427,11 @@
             <div class="feature-card__icon">🔌</div>
           </div>
           <h3 class="feature-card__title" data-i18n="feat.f13t">MCP 外部工具整合</h3>
-          <p class="feature-card__desc" data-i18n-html="feat.f13d"><code>mcp</code> 工具集透過 <code>mcp_servers.yaml</code> 匯入外部
+          <p class="feature-card__desc" data-i18n-html="feat.f13d"><code>mcp</code> 工具集透過 <code>mcp_servers.yaml</code>
+            匯入外部
             Model Context Protocol 工具。每個工具以 <code>mcp_&lt;server&gt;_&lt;tool&gt;</code> 格式經由
-            <code>ToolRegistry</code> 與 <code>ActionGateway</code> 受管執行，風險等級 MEDIUM。</p>
+            <code>ToolRegistry</code> 與 <code>ActionGateway</code> 受管執行，風險等級 MEDIUM。
+          </p>
           <ul class="feature-card__tags" aria-label="相關類別">
             <li class="tag">mcp_servers.yaml</li>
             <li class="tag">ToolRegistry</li>
@@ -444,7 +446,8 @@
           <h3 class="feature-card__title" data-i18n="feat.f14t">記憶體 &amp; 資料庫工具</h3>
           <p class="feature-card__desc" data-i18n-html="feat.f14d"><code>memory</code> 工具集（預設啟用）提供
             <code>memory.remember/recall/list/forget</code> 四支工具進行持久化工作區記憶。<code>database</code> 工具集以
-            SQLGlot 驗證唯讀 SQL，支援 SQLite 執行與 PostgreSQL schema 驗證，並可呼叫 LLM 將自然語言轉為 SQL。</p>
+            SQLGlot 驗證唯讀 SQL，支援 SQLite 執行與 PostgreSQL schema 驗證，並可呼叫 LLM 將自然語言轉為 SQL。
+          </p>
           <ul class="feature-card__tags" aria-label="相關類別">
             <li class="tag">memory.remember</li>
             <li class="tag">database.retrieve</li>
@@ -646,7 +649,8 @@
       </div>
 
       <div class="tech-stack reveal-up">
-        <h3 class="tech-stack__title" data-i18n="arch.techtitle">TOOLSET_CATALOG (40+ Tools) — 工具集 &amp; AI Providers</h3>
+        <h3 class="tech-stack__title" data-i18n="arch.techtitle">TOOLSET_CATALOG (40+ Tools) — 工具集 &amp; AI Providers
+        </h3>
         <div class="tech-stack__grid">
           <div class="tech-item tech-item--live" id="tech-file">
             <span class="tech-item__dot" aria-hidden="true"></span>
@@ -788,28 +792,17 @@
           <div class="security-item__icon" aria-hidden="true">🔐</div>
           <div class="security-item__body">
             <h3 class="security-item__title" data-i18n="sec.s1t">自動憑證遮蔽</h3>
-            <p class="security-item__desc" data-i18n="sec.s1d">Shell 輸出與 Observation 在寫入日誌前，自動 Redact API Key、Bearer Token、私鑰區塊等機密資訊</p>
+            <p class="security-item__desc" data-i18n="sec.s1d">Shell 輸出與 Observation 在寫入日誌前，自動 Redact API Key、Bearer
+              Token、私鑰區塊等機密資訊</p>
           </div>
         </div>
-        <div class="security-item" id="sec-env">
-          <div class="security-item__icon" aria-hidden="true">🚫</div>
-          <div class="security-item__body">
-            <h3 class="security-item__title" data-i18n="sec.s2t">.env 檔案完全封鎖</h3>
-            <p class="security-item__desc" data-i18n="sec.s2d"><code>.env</code>、<code>.env.local</code>、<code>.envrc</code> 等敏感檔案被阻擋於 file read/write/search 工具之外，API 金鑰永不進入模型上下文</p>
-          </div>
-        </div>
-        <div class="security-item" id="sec-workspace">
-          <div class="security-item__icon" aria-hidden="true">📁</div>
-          <div class="security-item__body">
-            <h3 class="security-item__title" data-i18n="sec.s3t">Workspace 強制隔離</h3>
-            <p class="security-item__desc" data-i18n="sec.s3d">所有設定、技能、截圖存於 <code>&lt;workspace&gt;/.autonomy/</code>，不讀取 <code>~/.autonomy</code> 作 fallback，強制每個專案獨立配置</p>
-          </div>
-        </div>
+
         <div class="security-item" id="sec-risk">
           <div class="security-item__icon" aria-hidden="true">🛡️</div>
           <div class="security-item__body">
             <h3 class="security-item__title" data-i18n="sec.s4t">三段式風險閘道</h3>
-            <p class="security-item__desc" data-i18n="sec.s4d"><code>RiskLevel.LOW</code>（讀取）自動放行；<code>MEDIUM</code>（寫入/瀏覽器）需授權；非互動模式下未知 Shell 命令直接拒絕</p>
+            <p class="security-item__desc" data-i18n="sec.s4d">
+              <code>RiskLevel.LOW</code>（讀取）自動放行；<code>MEDIUM</code>（寫入/瀏覽器）需授權；非互動模式下未知 Shell 命令直接拒絕</p>
           </div>
         </div>
       </div>
