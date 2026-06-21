@@ -35,7 +35,6 @@
         <li><a href="#features" class="nav__link" data-i18n="nav.features">核心模組</a></li>
         <li><a href="#architecture" class="nav__link" data-i18n="nav.arch">系統架構</a></li>
         <li><a href="#toolsets" class="nav__link" data-i18n="nav.toolsets">工具集</a></li>
-        <li><a href="#security" class="nav__link" data-i18n="nav.security">安全</a></li>
         <li><a href="#author" class="nav__link" data-i18n="nav.author">作者</a></li>
       </ul>
 
@@ -103,12 +102,12 @@
 
       <div class="hero__stats" role="list" aria-label="專案統計數據">
         <div class="hero__stat" role="listitem">
-          <span class="hero__stat-value" data-target="15">0</span>
+          <span class="hero__stat-value" data-target="13">0</span>
           <span class="hero__stat-label" data-i18n="hero.stat1">內建 Procedure Skills</span>
         </div>
         <div class="hero__stat-divider" aria-hidden="true"></div>
         <div class="hero__stat" role="listitem">
-          <span class="hero__stat-value" data-target="40">0</span>
+          <span class="hero__stat-value" data-target="30">0</span>
           <span class="hero__stat-label" data-i18n="hero.stat2">+ 內建工具</span>
         </div>
         <div class="hero__stat-divider" aria-hidden="true"></div>
@@ -128,26 +127,6 @@
       <div class="hero__scroll-arrow"></div>
     </div>
   </section>
-
-  <!-- ─── QUICKSTART STRIP ─── -->
-  <div class="quickstart-strip" id="quickstart" aria-label="快速開始">
-    <div class="container">
-      <div class="quickstart-inner">
-        <span class="quickstart-label" data-i18n="qs.label">快速開始</span>
-        <div class="quickstart-commands">
-          <code class="quickstart-cmd">git clone https://github.com/willweimike/autonomy.git</code>
-          <span class="quickstart-sep" aria-hidden="true">·</span>
-          <code class="quickstart-cmd">python -m pip install -e ".[dev]"</code>
-          <span class="quickstart-sep" aria-hidden="true">·</span>
-          <code class="quickstart-cmd">autonomy model setup</code>
-          <span class="quickstart-sep" aria-hidden="true">·</span>
-          <code class="quickstart-cmd">autonomy tui</code>
-        </div>
-        <a href="https://github.com/willweimike/autonomy" target="_blank" rel="noopener noreferrer"
-          class="quickstart-link" id="qs-github-link" data-i18n="qs.view">文件 ↗</a>
-      </div>
-    </div>
-  </div>
 
   <!-- ─── ABOUT ─── -->
   <section class="about section" id="about" aria-labelledby="about-heading">
@@ -232,7 +211,7 @@
     <div class="container">
       <div class="section-header">
         <div class="section-tag" data-i18n="feat.tag">核心模組</div>
-        <h2 class="section-title" id="features-heading" data-i18n="feat.h2">十四大技術特點</h2>
+        <h2 class="section-title" id="features-heading" data-i18n="feat.h2">十二大技術特點</h2>
         <p class="section-desc" data-i18n="feat.desc">每個特點都直接對應 Autonomy 原始碼中的具體實作</p>
       </div>
 
@@ -304,10 +283,10 @@
           <div class="feature-card__icon-wrap" aria-hidden="true">
             <div class="feature-card__icon">📚</div>
           </div>
-          <h3 class="feature-card__title" data-i18n="feat.f5t">程序技能庫（15 內建）</h3>
-          <p class="feature-card__desc" data-i18n-html="feat.f5d"><code>ProcedureSkillLibrary</code> 內建 15 個 bundled
+          <h3 class="feature-card__title" data-i18n="feat.f5t">程序技能庫（13 內建）</h3>
+          <p class="feature-card__desc" data-i18n-html="feat.f5d"><code>ProcedureSkillLibrary</code> 內建 13 個 bundled
             skills，涵蓋
-            api-debugging、browser-navigation、code-editing、codebase-documentation、plan、procedure-skill-authoring、process-management、requesting-code-review、systematic-debugging、technical-spike、TDD、website-inspection、writing-plans、<strong>database-retrieval</strong>、<strong>email-himalaya</strong>，每步動態選取最相關技能載入。
+            api-debugging、browser-navigation、code-editing、codebase-documentation、plan、procedure-skill-authoring、process-management、requesting-code-review、systematic-debugging、technical-spike、TDD、website-inspection、writing-plans，每步動態選取最相關技能載入。
           </p>
           <ul class="feature-card__tags" aria-label="相關類別">
             <li class="tag">ProcedureSkillLibrary</li>
@@ -419,36 +398,6 @@
             <li class="tag">ollama</li>
             <li class="tag">openrouter</li>
             <li class="tag">nvidia / deepseek / xAI</li>
-          </ul>
-        </article>
-
-        <article class="feature-card reveal-up" style="--delay:960ms" id="feature-mcp">
-          <div class="feature-card__icon-wrap" aria-hidden="true">
-            <div class="feature-card__icon">🔌</div>
-          </div>
-          <h3 class="feature-card__title" data-i18n="feat.f13t">MCP 外部工具整合</h3>
-          <p class="feature-card__desc" data-i18n-html="feat.f13d"><code>mcp</code> 工具集透過 <code>mcp_servers.yaml</code> 匯入外部
-            Model Context Protocol 工具。每個工具以 <code>mcp_&lt;server&gt;_&lt;tool&gt;</code> 格式經由
-            <code>ToolRegistry</code> 與 <code>ActionGateway</code> 受管執行，風險等級 MEDIUM。</p>
-          <ul class="feature-card__tags" aria-label="相關類別">
-            <li class="tag">mcp_servers.yaml</li>
-            <li class="tag">ToolRegistry</li>
-            <li class="tag">external-mcp</li>
-          </ul>
-        </article>
-
-        <article class="feature-card reveal-up" style="--delay:1040ms" id="feature-memory-db">
-          <div class="feature-card__icon-wrap" aria-hidden="true">
-            <div class="feature-card__icon">🗄️</div>
-          </div>
-          <h3 class="feature-card__title" data-i18n="feat.f14t">記憶體 &amp; 資料庫工具</h3>
-          <p class="feature-card__desc" data-i18n-html="feat.f14d"><code>memory</code> 工具集（預設啟用）提供
-            <code>memory.remember/recall/list/forget</code> 四支工具進行持久化工作區記憶。<code>database</code> 工具集以
-            SQLGlot 驗證唯讀 SQL，支援 SQLite 執行與 PostgreSQL schema 驗證，並可呼叫 LLM 將自然語言轉為 SQL。</p>
-          <ul class="feature-card__tags" aria-label="相關類別">
-            <li class="tag">memory.remember</li>
-            <li class="tag">database.retrieve</li>
-            <li class="tag">SQLGlot</li>
           </ul>
         </article>
 
@@ -646,7 +595,7 @@
       </div>
 
       <div class="tech-stack reveal-up">
-        <h3 class="tech-stack__title" data-i18n="arch.techtitle">TOOLSET_CATALOG (40+ Tools) — 工具集 &amp; AI Providers</h3>
+        <h3 class="tech-stack__title" data-i18n="arch.techtitle">TOOLSET_CATALOG — 工具集 &amp; AI Providers</h3>
         <div class="tech-stack__grid">
           <div class="tech-item tech-item--live" id="tech-file">
             <span class="tech-item__dot" aria-hidden="true"></span>
@@ -730,7 +679,7 @@
     <div class="container">
       <div class="section-header">
         <div class="section-tag" data-i18n="toolsets.tag">內建技能</div>
-        <h2 class="section-title" id="toolsets-heading" data-i18n="toolsets.h2">15 個 Bundled Procedure Skills</h2>
+        <h2 class="section-title" id="toolsets-heading" data-i18n="toolsets.h2">13 個 Bundled Procedure Skills</h2>
         <p class="section-desc" data-i18n="toolsets.desc">每個技能以 SKILL.md 格式定義，包含名稱、描述、所需工具與平台篩選</p>
       </div>
 
@@ -761,10 +710,6 @@
             aria-hidden="true">🔭</span><span class="skill-chip__name">website-inspection</span></div>
         <div class="skill-chip" role="listitem" id="skill-writing-plans"><span class="skill-chip__icon"
             aria-hidden="true">📝</span><span class="skill-chip__name">writing-plans</span></div>
-        <div class="skill-chip" role="listitem" id="skill-database"><span class="skill-chip__icon"
-            aria-hidden="true">🗄️</span><span class="skill-chip__name">database-retrieval</span></div>
-        <div class="skill-chip" role="listitem" id="skill-email"><span class="skill-chip__icon"
-            aria-hidden="true">📧</span><span class="skill-chip__name">email-himalaya</span></div>
       </div>
 
       <p class="skills-note reveal-up" data-i18n-html="toolsets.note">
@@ -772,47 +717,6 @@
         依可用工具名稱動態篩選並載入最相關技能；執行成功且達到門檻後，<code>LearningLoop</code> 將自動起草新技能並生成 <code>LearningProposal</code>（CANDIDATE
         狀態）。
       </p>
-    </div>
-  </section>
-
-  <!-- ─── SECURITY CALLOUT ─── -->
-  <section class="security-strip section" id="security" aria-labelledby="security-heading">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag" data-i18n="sec.tag">安全治理</div>
-        <h2 class="section-title" id="security-heading" data-i18n="sec.h2">企業級安全邊界</h2>
-        <p class="section-desc" data-i18n="sec.desc">每個安全特性都直接對應 Autonomy 原始碼中的具體實作，不是文件上的承諾</p>
-      </div>
-      <div class="security-grid reveal-up">
-        <div class="security-item" id="sec-redact">
-          <div class="security-item__icon" aria-hidden="true">🔐</div>
-          <div class="security-item__body">
-            <h3 class="security-item__title" data-i18n="sec.s1t">自動憑證遮蔽</h3>
-            <p class="security-item__desc" data-i18n="sec.s1d">Shell 輸出與 Observation 在寫入日誌前，自動 Redact API Key、Bearer Token、私鑰區塊等機密資訊</p>
-          </div>
-        </div>
-        <div class="security-item" id="sec-env">
-          <div class="security-item__icon" aria-hidden="true">🚫</div>
-          <div class="security-item__body">
-            <h3 class="security-item__title" data-i18n="sec.s2t">.env 檔案完全封鎖</h3>
-            <p class="security-item__desc" data-i18n="sec.s2d"><code>.env</code>、<code>.env.local</code>、<code>.envrc</code> 等敏感檔案被阻擋於 file read/write/search 工具之外，API 金鑰永不進入模型上下文</p>
-          </div>
-        </div>
-        <div class="security-item" id="sec-workspace">
-          <div class="security-item__icon" aria-hidden="true">📁</div>
-          <div class="security-item__body">
-            <h3 class="security-item__title" data-i18n="sec.s3t">Workspace 強制隔離</h3>
-            <p class="security-item__desc" data-i18n="sec.s3d">所有設定、技能、截圖存於 <code>&lt;workspace&gt;/.autonomy/</code>，不讀取 <code>~/.autonomy</code> 作 fallback，強制每個專案獨立配置</p>
-          </div>
-        </div>
-        <div class="security-item" id="sec-risk">
-          <div class="security-item__icon" aria-hidden="true">🛡️</div>
-          <div class="security-item__body">
-            <h3 class="security-item__title" data-i18n="sec.s4t">三段式風險閘道</h3>
-            <p class="security-item__desc" data-i18n="sec.s4d"><code>RiskLevel.LOW</code>（讀取）自動放行；<code>MEDIUM</code>（寫入/瀏覽器）需授權；非互動模式下未知 Shell 命令直接拒絕</p>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -934,7 +838,7 @@
         </div>
       </div>
       <p class="footer__copy" data-i18n="footer.copy">
-        © 2025–2026 Bill Liu · Autonomy Framework · AgentLoop · ProcedureSkillLibrary · CuratorDaemon
+        © 2025 Bill Liu · Autonomy Framework · AgentLoop · ProcedureSkillLibrary · CuratorDaemon
       </p>
     </div>
   </footer>
